@@ -18,19 +18,19 @@ const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
             {/* Header */}
             <div>
                 <p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
-                    {props.project.ProjectHeader.title}
+                    {props.project.projectHeader.title}
                 </p>
                 <div className="flex">
                     <div className="flex items-center mr-10">
                         <FiClock className="text-xl text-ternary-dark dark:text-ternary-light" />
                         <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-                            {props.project.ProjectHeader.publishDate}
+                            {props.project.projectHeader.publishDate}
                         </span>
                     </div>
                     <div className="flex items-center">
                         <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
                         <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-                            {props.project.ProjectHeader.tags}
+                            {props.project.projectHeader.tags}
                         </span>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
 
             {/* Gallery */}
             <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-                {props.project.ProjectImages.map((project: any) => {
+                {props.project.projectImages.map((project: any) => {
                     return (
                         <div className="mb-10 sm:mb-0" key={project.id}>
                             <Image
@@ -93,20 +93,20 @@ const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
                     {/* Single project objectives */}
                     <div className="mb-7">
                         <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-                            {props.project.ProjectInfo.ObjectivesHeading}
+                            {props.project.projectInfo.objectivesHeading}
                         </p>
                         <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-                            {props.project.ProjectInfo.ObjectivesDetails}
+                            {props.project.projectInfo.objectivesDetails}
                         </p>
                     </div>
 
                     {/* Single project technologies */}
                     <div className="mb-7">
                         <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-                            {props.project.ProjectInfo.Technologies[0].title}
+                            {props.project.projectInfo.technologies[0].title}
                         </p>
                         <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-                            {props.project.ProjectInfo.Technologies[0].techs.map(
+                            {props.project.projectInfo.technologies[0].techs.map(
                                 (tech: any) => {
                                     return (
                                         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
@@ -122,9 +122,9 @@ const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
                 {/*  Single project right section details */}
                 <div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
                     <p className="text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
-                        {props.project.ProjectInfo.ProjectDetailsHeading}
+                        {props.project.projectInfo.projectDetailsHeading}
                     </p>
-                    {props.project.ProjectInfo.ProjectDetails.map(
+                    {props.project.projectInfo.projectDetails.map(
                         (details: any) => {
                             return (
                                 <p

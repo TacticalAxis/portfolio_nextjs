@@ -49,9 +49,478 @@ export interface ProjectData {
     projectInfo: ProjectInfo;
 }
 
+// COMPANY INFO EXAMPLE
+// companyInfo: [
+//     {
+//         id: uuidv4(),
+//         title: 'Name',
+//         details: 'Company Ltd',
+//     }
+// ],
+
 export const projectsData: ProjectData[] = [
     {
         id: 1,
+        title: 'Chrono.ly',
+        url: 'chronoly-time-tracking',
+        category: 'Web Application',
+        img: '/images/projects/chronoly.jpg',
+        projectHeader: {
+            title: 'Chrono.ly Time Tracker for Freelancers',
+            publishDate: '01/2023',
+            tags: 'Web Application/VSCode Extension',
+        },
+        projectImages: [
+            {
+                id: uuidv4(),
+                title: 'Chronoly Landing Page',
+                img: '/images/projects/chronoly/image1.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'Automated Code Time Tracking',
+                img: '/images/projects/chronoly/image2.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'Chronoly FAQ Page',
+                img: '/images/projects/chronoly/image3.png',
+            },
+        ],
+        projectInfo: {
+            clientHeading: 'About Client',
+            companyInfo: [],
+            objectivesHeading: 'Objective',
+            objectivesDetails:
+                'The objective of this project is to create a time tracking application for freelancers so they can easily track their time spent on projects, and generate invoices for their clients.',
+            technologies: [
+                {
+                    title: 'Tools & Technologies',
+                    techs: [
+                        'Next.js',
+                        'TypeScript',
+                        'tRPC',
+                        'Prisma',
+                        'TailwindCSS',
+                        'NextAuth.js',
+                        'VSCode Extension API',
+                        'NestJS',
+                        'MongoDB',
+                        'Docker',
+                        'AWS',
+                        'Figma'
+                    ],
+                },
+            ],
+            projectDetailsHeading: 'Proposal',
+            projectDetails: [
+                {
+                    id: uuidv4(),
+                    details: 'Chrono.ly is a time tracking application for freelancers. It is a VSCode Plugin + Website Companion that allows users to track their time spent on projects, and generate invoices for their clients. It also has a VSCode extension that allows users to track their time spent on projects directly from their code editor.',
+                },
+                {
+                    id: uuidv4(),
+                    details: 'The website is built with Next.js, TypeScript, and TailwindCSS. The backend is built with Next.js API Routes, tRPC, and Prisma. (This is the T3 stack).',
+                }
+            ],
+        },
+    },
+    {
+        id: 2,
+        title: 'Speed Database',
+        url: 'speed-database',
+        category: 'Web Application',
+        img: '/images/ui-project-1.jpg',
+        projectHeader: {
+            title: 'The SPEED Database',
+            publishDate: '08/2023',
+            tags: 'Web Application',
+        },
+        projectImages: [],
+        projectInfo: {
+            clientHeading: 'Tony Clear',
+            companyInfo: [],
+            objectivesHeading: 'Objective',
+            objectivesDetails: 'The objective is to build a database of articles and other resources related to the SPEED framework. The database will be searchable by keyword, and will be able to be filtered by category, author, and other metadata.',
+            technologies: [
+                {
+                    title: 'Tools & Technologies',
+                    techs: [
+                        'Next.js',
+                        'TypeScript',
+                        'tRPC',
+                        'Prisma',
+                        'TailwindCSS',
+                        'NextAuth.js',
+                        'NestJS',
+                        'MongoDB',
+                        'Figma'
+                    ],
+                },
+            ],
+            projectDetailsHeading: 'Project Description',
+            projectDetails: [
+                {
+                    id: uuidv4(),
+                    details:
+                        'The SPEED database is a searchable database of articles and other resources related different software development practices such as TDD, etc. The database will be searchable by keyword, and will be able to be filtered by category, author, and other metadata. The website will be built with Using the T3 stack (Next.js, TypeScript, tRPC, Prisma, TailwindCSS, and NextAuth.js). The database will be stored on MongoDB Atlas.',
+                },
+            ],
+        },
+    },
+    // {
+    //     id: 3,
+    //     title: 'OneDollarDice',
+    //     url: 'project-management-ui',
+    //     category: 'UI/UX Design',
+    //     img: '/images/ui-project-1.jpg',
+    //     projectHeader: {
+    //         title: 'Project Management UI',
+    //         publishDate: 'Jul 26, 2021',
+    //         tags: 'UI / Frontend',
+    //     },
+    //     projectImages: [
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/ui-project-1.jpg',
+    //         },
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/web-project-2.jpg',
+    //         },
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/mobile-project-2.jpg',
+    //         },
+    //     ],
+    //     projectInfo: {
+    //         clientHeading: 'About Client',
+    //         companyInfo: [
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Name',
+    //                 details: 'Company Ltd',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Services',
+    //                 details: 'UI Design & Frontend Development',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Website',
+    //                 details: 'https://company.com',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Phone',
+    //                 details: '555 8888 888',
+    //             },
+    //         ],
+    //         objectivesHeading: 'Objective',
+    //         objectivesDetails:
+    //             'some objective',
+    //         technologies: [
+    //             {
+    //                 title: 'Tools & Technologies',
+    //                 techs: [
+    //                     'HTML',
+    //                     'CSS',
+    //                     'JavaScript',
+    //                     'Vue.js',
+    //                     'TailwindCSS',
+    //                     'AdobeXD',
+    //                 ],
+    //             },
+    //         ],
+    //         projectDetailsHeading: 'Challenge',
+    //         projectDetails: [
+    //             {
+    //                 id: uuidv4(),
+    //                 details:
+    //                     'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+    //             }
+    //         ],
+    //     },
+    // },
+    {
+        id: 4,
+        title: 'iFridge',
+        url: 'ifridge',
+        category: 'Progressive Web Application',
+        img: '/images/ui-project-1.jpg',
+        projectHeader: {
+            title: 'iFridge - Portable Inventory & Recipe Generator',
+            publishDate: '07/2022',
+            tags: 'Web Application',
+        },
+        projectImages: [
+            {
+                id: uuidv4(),
+                title: 'iFridge Landing Page',
+                img: '/images/projects/ifridge/image1.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'Inventory System',
+                img: '/images/projects/ifridge/image2.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'Recipe Generation',
+                img: '/images/projects/ifridge/image3.png',
+            },
+        ],
+        projectInfo: {
+            clientHeading: 'About Client',
+            companyInfo: [],
+            objectivesHeading: 'Objective',
+            objectivesDetails: 'The objective is to build a web application that allows users to track their food inventory, and generate recipes based on the ingredients they have in their fridge.',
+            technologies: [
+                {
+                    title: 'Tools & Technologies',
+                    techs: [
+                        'React',
+                        'JavaScript',
+                        'ExpressJS',
+                        'Firebase',
+                        'Bootstrap',
+                    ],
+                },
+            ],
+            projectDetailsHeading: 'Project Description',
+            projectDetails: [
+                {
+                    id: uuidv4(),
+                    details:
+                        'iFridge is a web application that allows users to track their food inventory, and generate recipes based on the ingredients they have in their fridge. The website is built with React, JavaScript, ExpressJS, Firebase, and Bootstrap. This project was made as part of the Software Development Practice paper at the Auckland University of Technology.',
+                }
+            ],
+        },
+    },
+    {
+        id: 5,
+        title: 'Ramen NFT Collectibles',
+        url: 'ramen-nft',
+        category: 'NFT Project',
+        img: '/images/projects/ramennft/image1.png',
+        projectHeader: {
+            title: 'Ramen NFT Collectibles',
+            publishDate: '12/2021',
+            tags: 'NFT Project',
+        },
+        projectImages: [
+            {
+                id: uuidv4(),
+                title: 'RamenNFT Landing Page',
+                img: '/images/projects/ramennft/image1.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'RamenNFT Collectibles',
+                img: '/images/projects/ramennft/image2.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'RamenNFT Minting Process',
+                img: '/images/projects/ramennft/image3.png',
+            },
+        ],
+        projectInfo: {
+            clientHeading: 'About Client',
+            companyInfo: [],
+            objectivesHeading: 'Objective',
+            objectivesDetails:
+                'The objective of RamenNFT was to create a community-based NFT project that would allow users to customise and mint their own NFTs, trade them with other users.',
+            technologies: [
+                {
+                    title: 'Tools & Technologies',
+                    techs: [
+                        'HTML',
+                        'CSS',
+                        'JavaScript',
+                        'Solidity',
+                        'Web3',
+                        'Truffle',
+                        'Blockchain'
+                    ],
+                },
+            ],
+            projectDetailsHeading: 'Project Description',
+            projectDetails: [
+                {
+                    id: uuidv4(),
+                    details:
+                        'RamenNFT is a community-based NFT project that allows users to customise and mint their own NFTs, and trade them with other users within the RamenNFT community. The website was build with basic HTML, JavaScript, and using the Bootstrap framework, but the backend was built using Solidity, Web3, and Truffle for local development. The NFTs never reached the minting stage, but the project was a great learning experience for me to learn about the blockchain, and how to build a decentralised application.',
+                }
+            ],
+        },
+    },
+    {
+        id: 6,
+        title: 'StudyGrove',
+        url: 'studygrove',
+        category: 'Web Application',
+        img: '/images/projects/studygrove/image1.png',
+        projectHeader: {
+            title: 'StudyGrove - Online Study Communication Platform (Concept)',
+            publishDate: '03/2021',
+            tags: 'Web Application',
+        },
+        projectImages: [
+            {
+                id: uuidv4(),
+                title: 'StudyGrove Landing Page',
+                img: '/images/projects/studygrove/image1.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'StudyGrove Feed Page',
+                img: '/images/projects/studygrove/image2.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'StudyGrove Groups Page',
+                img: '/images/projects/studygrove/image3.png',
+            },
+        ],
+        projectInfo: {
+            clientHeading: 'About Client',
+            companyInfo: [],
+            objectivesHeading: 'Objective',
+            objectivesDetails:
+                'The objective of StudyGrove was to create a web application that would allow students to communicate with each other, and share resources with each other.',
+            technologies: [
+                {
+                    title: 'Tools & Technologies',
+                    techs: [
+                        'HTML',
+                        'CSS',
+                        'JavaScript'
+                    ],
+                },
+            ],
+            projectDetailsHeading: 'Project Description',
+            projectDetails: [
+                {
+                    id: uuidv4(),
+                    details:
+                        'StudyGrove is a web application that allows students to communicate with each other, share resources, and talk about assignments and other topics for certain papers. Students would be able to login with their AUT ID, as this concept was built specifically for educational use. The website was built with basic HTML, CSS, and JavaScript. This project concept was made as part of the Mahitahi paper at the Auckland University of Technology.',
+                }
+            ],
+        },
+    },
+    {
+        id: 7,
+        title: 'ICT Fundamentals',
+        url: 'ict-fundamentals',
+        category: 'Web Application',
+        img: '/images/projects/ictfundamentals/image1.png',
+        projectHeader: {
+            title: 'ICT Fundamentals',
+            publishDate: '03/2021',
+            tags: 'Web Application',
+        },
+        projectImages: [
+            {
+                id: uuidv4(),
+                title: 'ICT Fundamentals Binary Basics',
+                img: '/images/projects/ictfundamentals/image1.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'ICT Fundamentals Testing Different OSes',
+                img: '/images/projects/ictfundamentals/image2.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'ICT Fundamentals Testing YOLOv3 Image Recognition',
+                img: '/images/projects/ictfundamentals/image3.png',
+            },
+        ],
+        projectInfo: {
+            clientHeading: 'About Client',
+            companyInfo: [],
+            objectivesHeading: 'Objective',
+            objectivesDetails:
+                'The objective of this project was to create a web application that would allow students to learn about the basics of IT, learn about different operating systems, and image recognition.',
+            technologies: [
+                {
+                    title: 'Tools & Technologies',
+                    techs: [
+                        'HTML',
+                        'CSS'
+                    ],
+                },
+            ],
+            projectDetailsHeading: 'Challenge',
+            projectDetails: [
+                {
+                    id: uuidv4(),
+                    details:
+                        'ICT Fundamentals is a web application that allows students to learn about the basics of IT, learn about different operating systems, and image recognition. The website was built with basic HTML and CSS. This project was made as part of the Computing Technology in Society paper at the Auckland University of Technology.',
+                }
+            ],
+        },
+    },
+    {
+        id: 8,
+        title: 'Freelance Java Developer',
+        url: 'freelance-java-developer',
+        category: 'Freelancing',
+        img: '/images/projects/freelance/image1.png',
+        projectHeader: {
+            title: 'Freelance Java Developer',
+            publishDate: '12/2020',
+            tags: 'Freelancing',
+        },
+        projectImages: [
+            {
+                id: uuidv4(),
+                title: 'Freelancing Overview',
+                img: '/images/projects/freelancing/image1.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'Freelancing Orders',
+                img: '/images/projects/freelancing/image2.png',
+            },
+            {
+                id: uuidv4(),
+                title: 'Freelancing Earnings',
+                img: '/images/projects/freelancing/image3.png',
+            },
+        ],
+        projectInfo: {
+            clientHeading: 'About Client',
+            companyInfo: [],
+            objectivesHeading: 'Objective',
+            objectivesDetails:
+                'The objective of starting out in freelancing was to learn about programming under pressure, and to learn how to work with clients.',
+            technologies: [
+                {
+                    title: 'Tools & Technologies',
+                    techs: [
+                        'Java',
+                        'Minecraft',
+                    ],
+                },
+            ],
+            projectDetailsHeading: 'Project Description',
+            projectDetails: [
+                {
+                    id: uuidv4(),
+                    details:
+                        'I started out in freelancing by creating Minecraft plugins for clients. I learned a lot about programming under pressure, and how to work with clients. I also learned how to manage my time, and how to work on multiple projects at once. I earned many positive reviews from clients, and I was able to build a good reputation for myself as a freelance Java developer.',
+                }
+            ],
+        },
+    },
+    {
+        id: 9,
         title: 'Auckland Transport Bot',
         url: 'auckland-transport-discord-bot',
         category: 'Discord Bot',
@@ -112,160 +581,160 @@ export const projectsData: ProjectData[] = [
             ],
         },
     },
-    {
-        id: 2,
-        title: 'Ramen NFT Collectibles',
-        url: 'ramen-nft',
-        category: 'NFT Project',
-        img: '/images/mobile-project-2.jpg',
-        projectHeader: {
-            title: 'Phoenix Digital Agency',
-            publishDate: 'Jul 26, 2021',
-            tags: 'Mobile Application',
-        },
-        projectImages: [
-            {
-                id: uuidv4(),
-                title: 'Phoenix Digital Agency',
-                img: '/images/ui-project-1.jpg',
-            },
-            {
-                id: uuidv4(),
-                title: 'Phoenix Digital Agency',
-                img: '/images/web-project-2.jpg',
-            },
-            {
-                id: uuidv4(),
-                title: 'Phoenix Digital Agency',
-                img: '/images/mobile-project-2.jpg',
-            },
-        ],
-        projectInfo: {
-            clientHeading: 'About Client',
-            companyInfo: [
-                {
-                    id: uuidv4(),
-                    title: 'Name',
-                    details: 'Company Ltd',
-                },
-                {
-                    id: uuidv4(),
-                    title: 'Services',
-                    details: 'UI Design & Frontend Development',
-                },
-                {
-                    id: uuidv4(),
-                    title: 'Website',
-                    details: 'https://company.com',
-                },
-                {
-                    id: uuidv4(),
-                    title: 'Phone',
-                    details: '555 8888 888',
-                },
-            ],
-            objectivesHeading: 'Objective',
-            objectivesDetails:
-                'Some Project',
-            technologies: [
-                {
-                    title: 'Tools & Technologies',
-                    techs: [
-                        'HTML',
-                        'CSS',
-                        'JavaScript',
-                        'Vue.js',
-                        'TailwindCSS',
-                        'AdobeXD',
-                    ],
-                },
-            ],
-            projectDetailsHeading: 'Challenge',
-            projectDetails: [
-                {
-                    id: uuidv4(),
-                    details:
-                        'Some project details',
-                },
-            ],
-        },
-    },
-    {
-        id: 3,
-        title: 'Project Management UI',
-        url: 'project-management-ui',
-        category: 'UI/UX Design',
-        img: '/images/ui-project-1.jpg',
-        projectHeader: {
-            title: 'Project Management UI',
-            publishDate: 'Jul 26, 2021',
-            tags: 'UI / Frontend',
-        },
-        projectImages: [
-            {
-                id: uuidv4(),
-                title: 'Kabul Project Management UI',
-                img: '/images/ui-project-1.jpg',
-            },
-            {
-                id: uuidv4(),
-                title: 'Kabul Project Management UI',
-                img: '/images/web-project-2.jpg',
-            },
-            {
-                id: uuidv4(),
-                title: 'Kabul Project Management UI',
-                img: '/images/mobile-project-2.jpg',
-            },
-        ],
-        projectInfo: {
-            clientHeading: 'About Client',
-            companyInfo: [
-                {
-                    id: uuidv4(),
-                    title: 'Name',
-                    details: 'Company Ltd',
-                },
-                {
-                    id: uuidv4(),
-                    title: 'Services',
-                    details: 'UI Design & Frontend Development',
-                },
-                {
-                    id: uuidv4(),
-                    title: 'Website',
-                    details: 'https://company.com',
-                },
-                {
-                    id: uuidv4(),
-                    title: 'Phone',
-                    details: '555 8888 888',
-                },
-            ],
-            objectivesHeading: 'Objective',
-            objectivesDetails:
-                'some objective',
-            technologies: [
-                {
-                    title: 'Tools & Technologies',
-                    techs: [
-                        'HTML',
-                        'CSS',
-                        'JavaScript',
-                        'Vue.js',
-                        'TailwindCSS',
-                        'AdobeXD',
-                    ],
-                },
-            ],
-            projectDetailsHeading: 'Challenge',
-            projectDetails: [
-                {
-                    id: uuidv4(),
-                    details:
-                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-                }
-            ],
-        },
-    }
+    // {
+    //     id: 10,
+    //     title: 'TheNexus',
+    //     url: 'project-management-ui',
+    //     category: 'UI/UX Design',
+    //     img: '/images/ui-project-1.jpg',
+    //     projectHeader: {
+    //         title: 'Project Management UI',
+    //         publishDate: 'Jul 26, 2021',
+    //         tags: 'UI / Frontend',
+    //     },
+    //     projectImages: [
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/ui-project-1.jpg',
+    //         },
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/web-project-2.jpg',
+    //         },
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/mobile-project-2.jpg',
+    //         },
+    //     ],
+    //     projectInfo: {
+    //         clientHeading: 'About Client',
+    //         companyInfo: [
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Name',
+    //                 details: 'Company Ltd',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Services',
+    //                 details: 'UI Design & Frontend Development',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Website',
+    //                 details: 'https://company.com',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Phone',
+    //                 details: '555 8888 888',
+    //             },
+    //         ],
+    //         objectivesHeading: 'Objective',
+    //         objectivesDetails:
+    //             'some objective',
+    //         technologies: [
+    //             {
+    //                 title: 'Tools & Technologies',
+    //                 techs: [
+    //                     'HTML',
+    //                     'CSS',
+    //                     'JavaScript',
+    //                     'Vue.js',
+    //                     'TailwindCSS',
+    //                     'AdobeXD',
+    //                 ],
+    //             },
+    //         ],
+    //         projectDetailsHeading: 'Challenge',
+    //         projectDetails: [
+    //             {
+    //                 id: uuidv4(),
+    //                 details:
+    //                     'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+    //             }
+    //         ],
+    //     },
+    // },
+    // {
+    //     id: 11,
+    //     title: 'SchoolMania',
+    //     url: 'project-management-ui',
+    //     category: 'UI/UX Design',
+    //     img: '/images/ui-project-1.jpg',
+    //     projectHeader: {
+    //         title: 'Project Management UI',
+    //         publishDate: 'Jul 26, 2021',
+    //         tags: 'UI / Frontend',
+    //     },
+    //     projectImages: [
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/ui-project-1.jpg',
+    //         },
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/web-project-2.jpg',
+    //         },
+    //         {
+    //             id: uuidv4(),
+    //             title: 'Kabul Project Management UI',
+    //             img: '/images/mobile-project-2.jpg',
+    //         },
+    //     ],
+    //     projectInfo: {
+    //         clientHeading: 'About Client',
+    //         companyInfo: [
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Name',
+    //                 details: 'Company Ltd',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Services',
+    //                 details: 'UI Design & Frontend Development',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Website',
+    //                 details: 'https://company.com',
+    //             },
+    //             {
+    //                 id: uuidv4(),
+    //                 title: 'Phone',
+    //                 details: '555 8888 888',
+    //             },
+    //         ],
+    //         objectivesHeading: 'Objective',
+    //         objectivesDetails:
+    //             'some objective',
+    //         technologies: [
+    //             {
+    //                 title: 'Tools & Technologies',
+    //                 techs: [
+    //                     'HTML',
+    //                     'CSS',
+    //                     'JavaScript',
+    //                     'Vue.js',
+    //                     'TailwindCSS',
+    //                     'AdobeXD',
+    //                 ],
+    //             },
+    //         ],
+    //         projectDetailsHeading: 'Challenge',
+    //         projectDetails: [
+    //             {
+    //                 id: uuidv4(),
+    //                 details:
+    //                     'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+    //             }
+    //         ],
+    //     },
+    // },
 ]

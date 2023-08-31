@@ -13,6 +13,23 @@ const AppBanner: React.FC = () => {
             className="flex flex-col justify-center items-center mt-12"
         >
             <div className="w-full md:w-1/2 text-center">
+                {/* motion image */}
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 0.9,
+                        delay: 0.1,
+                    }}
+                    src={`/images/profile.png`}
+                    alt="Nathan Dsouza"
+                    className="mx-auto w-48 h-48 sm:w-60 sm:h-60 rounded-full shadow-lg"
+                />
+
+                <br />
+                <br />
+
                 <motion.h1
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

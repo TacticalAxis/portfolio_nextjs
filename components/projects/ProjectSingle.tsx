@@ -40,7 +40,7 @@ const ProjectSingle: React.FC<ProjectSingleProps> = ({
                             className="rounded-t-xl border-none"
                             alt="Single Project"
                             width={1200}
-                            height={800}
+                            height={900}
                             style={imageStyle}
                         />
                     </div> */}
