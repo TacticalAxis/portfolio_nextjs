@@ -109,7 +109,10 @@ const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
                             {props.project.projectInfo.technologies[0].techs.map(
                                 (tech: any) => {
                                     return (
-                                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                        <span
+                                            key={tech}
+                                            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                                        >
                                             {tech}
                                         </span>
                                     )

@@ -2,7 +2,7 @@ import React from 'react';
 
 interface CounterItemProps {
     title: string;
-    counter: number;
+    counter: JSX.Element;
     measurement: string;
 }
 

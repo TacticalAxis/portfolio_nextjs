@@ -29,7 +29,7 @@ function ContactForm() {
                 <div className="leading-loose">
                     <div className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-center">
                         <p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
-                            Thanks.<br/><br/>I'll be in touch as soon as possible.
+                            Thanks.<br/><br/>I&rsquo;ll be in touch as soon as possible.
                         </p>
                     </div>
                 </div>
