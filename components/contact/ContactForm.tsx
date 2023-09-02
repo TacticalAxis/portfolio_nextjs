@@ -15,12 +15,27 @@ function ContactForm() {
             message: formData.get('message') as string,
         }
 
-        fetch('/api/contact', {
-            method: 'POST',
-            body: JSON.stringify(data),
-        }).then(() => {
+        // fetch('/api/contact', {
+        //     method: 'POST',
+        //     body: JSON.stringify(data),
+        // }).then(() => {
+        //     setFormSubmitted(true);
+        // });
+
+        fetch(
+            'https://discord.com/api/webhooks/1146574207535284355/IHe4D25etrmM-lp7QXqzQBJIoDA9Ey8BKgDlmGExzx_TuNjUhPv5KkI2RPAxajco91oA',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    content: `__**Hire Request2**__\n**Name:** ${data.name}\n**Email:** ${data.email}\n**Subject:** ${data.subject}\n**Message:** ${data.message}`,
+                }),
+            },
+        ).then((res) => {
             setFormSubmitted(true);
-        });
+        })
     }
 
     if (formSubmitted) {
