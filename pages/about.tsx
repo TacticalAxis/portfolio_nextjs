@@ -33,7 +33,7 @@ const About: React.FC = () => {
                         </h3>
                         <p>
                             Contract - Auto Parts Industrial NZ, Auckland, New
-                            Zealand
+                            Zealand (09/2022 - Present)
                         </p>
                         <p className="mt-2">
                             Designed a client-server style python program to
@@ -71,7 +71,7 @@ const About: React.FC = () => {
                             Raspberry Pi Development Assistant
                         </h3>
                         <p className="">
-                            Farmgate Security, Auckland, New Zealand
+                            Farmgate Security, Auckland, New Zealand (09/2021 - 03/2022)
                         </p>
                         <p className="">
                             Building a barrier system that uses ANPR, Raspberry
@@ -114,7 +114,7 @@ const About: React.FC = () => {
                             Club Treasurer
                         </h3>
                         <p className="">
-                            AUT Cyber Security Club, Auckland, New Zealand
+                            AUT Cyber Security Club, Auckland, New Zealand (08/2021 - 07/2022)
                         </p>
                         <p className="">
                             Hosted beginner hacking events, demonstrating
@@ -133,7 +133,7 @@ const About: React.FC = () => {
                         <h3 className="text-lg font-medium mb-2">
                             Freelance Java Developer
                         </h3>
-                        <p className="">Fiverr, Remote</p>
+                        <p className="">Fiverr, Remote (12/2020 - 07/2022)</p>
                         <p className="">Understanding customer requirements and
                                 converting this into customised Minecraft
                                 Plugins developed using the Java Programming
