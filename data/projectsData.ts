@@ -62,7 +62,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 1,
         title: 'Chrono.ly',
-        url: 'chronoly-time-tracking',
+        url: 'https://chrono.ly',
         category: 'Website',
         img: '/images/projects/chronoly.jpg',
         projectHeader: {
@@ -128,7 +128,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 2,
         title: 'Speed Database',
-        url: 'speed-database',
+        url: '',
         category: 'Website',
         img: '/images/ui-project-1.jpg',
         projectHeader: {
@@ -171,7 +171,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 4,
         title: 'iFridge',
-        url: 'ifridge',
+        url: 'https://ifrid.ge',
         category: 'PWA',
         img: '/images/ui-project-1.jpg',
         projectHeader: {
@@ -226,7 +226,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 5,
         title: 'Ramen NFT Collectibles',
-        url: 'ramen-nft',
+        url: 'https://ramennft.tak-7.net',
         category: 'NFT Project',
         img: '/images/projects/ramennft/image1.png',
         projectHeader: {
@@ -284,7 +284,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 6,
         title: 'StudyGrove Community',
-        url: 'studygrove',
+        url: 'https://studygrove.tak-7.net',
         category: 'Website',
         img: '/images/projects/studygrove/image1.png',
         projectHeader: {
@@ -338,7 +338,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 7,
         title: 'ICT Fundamentals Project',
-        url: 'ict-fundamentals',
+        url: 'https://comp501.tak-7.net',
         category: 'Website',
         img: '/images/projects/ictfundamentals/image1.png',
         projectHeader: {
@@ -391,7 +391,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 8,
         title: 'Freelance Java Developer',
-        url: 'freelance-java-developer',
+        url: 'https://www.fiverr.com/users/nathand256',
         category: 'Freelancing',
         img: '/images/projects/freelance/image1.png',
         projectHeader: {
@@ -444,7 +444,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 9,
         title: 'The Auckland Transport Bot',
-        url: 'auckland-transport-discord-bot',
+        url: 'https://github.com/TacticalAxis/auckland-transport',
         category: 'Discord Bot',
         img: '/images/projects/auckland-transport/atimage.png',
         projectHeader: {

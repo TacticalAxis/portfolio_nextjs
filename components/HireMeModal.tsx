@@ -39,6 +39,7 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
             method: 'POST',
             body: JSON.stringify(data),
         }).then((res) => {
+            console.log(res)
             if (res.status === 200) {
                 setSubmitted(true)
                 const currentTime = new Date().toLocaleTimeString()

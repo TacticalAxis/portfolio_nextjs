@@ -1,13 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
-import { FiClock, FiTag } from 'react-icons/fi'
+import { FiChrome, FiClock, FiExternalLink, FiTag } from 'react-icons/fi'
 import PagesMetaHead from '../../components/PagesMetaHead'
 import { projectsData } from '../../data/projectsData'
 import RelatedProjects from '../../components/projects/RelatedProjects'
 import { GetServerSideProps } from 'next'
+import { ProjectData } from '../../data/projectsData'
+import Link from 'next/link'
 
 interface ProjectSingleProps {
-    project: any
+    project: ProjectData
 }
 
 const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
@@ -27,6 +29,7 @@ const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
                             {props.project.projectHeader.publishDate}
                         </span>
                     </div>
+
                     <div className="flex items-center">
                         <FiTag className="w-4 h-4 text-ternary-dark dark:text-ternary-light" />
                         <span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
@@ -89,6 +92,23 @@ const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
 							)}
 						</ul>
 					</div> */}
+
+                    {/* project Link */}
+                    { props.project.url && (
+                    <div className="mb-7">
+                        <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+                            Project Link
+                        </p>
+                        <p className="font-general-regular text-primary-dark dark:text-ternary-light">
+                            <Link href={props.project.url} target="_blank">
+                                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                    <FiExternalLink className="w-4 h-4 inline-block mr-2" />
+                                    Visit
+                                    </span>
+                            </Link>
+                        </p>
+                    </div>
+                    )}
 
                     {/* Single project objectives */}
                     <div className="mb-7">

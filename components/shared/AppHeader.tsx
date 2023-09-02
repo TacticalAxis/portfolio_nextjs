@@ -109,7 +109,7 @@ const AppHeader: FC = () => {
                     }
                 >
                     <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
-                        <Link href="/portfolio" aria-label="Portfolio">
+                        <Link href="/projects" aria-label="Portfolio">
                             Portfolio
                         </Link>
                     </div>
@@ -145,7 +145,7 @@ const AppHeader: FC = () => {
                         className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
                         aria-label="Portfolio"
                     >
-                        <Link href="/portfolio">Portfolio</Link>
+                        <Link href="/projects">Portfolio</Link>
                     </div>
                     <div
                         className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
