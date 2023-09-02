@@ -63,7 +63,7 @@ export const projectsData: ProjectData[] = [
         id: 1,
         title: 'Chrono.ly',
         url: 'chronoly-time-tracking',
-        category: 'Web Application',
+        category: 'Website',
         img: '/images/projects/chronoly.jpg',
         projectHeader: {
             title: 'Chrono.ly Time Tracker for Freelancers',
@@ -129,7 +129,7 @@ export const projectsData: ProjectData[] = [
         id: 2,
         title: 'Speed Database',
         url: 'speed-database',
-        category: 'Web Application',
+        category: 'Website',
         img: '/images/ui-project-1.jpg',
         projectHeader: {
             title: 'The SPEED Database',
@@ -168,89 +168,11 @@ export const projectsData: ProjectData[] = [
             ],
         },
     },
-    // {
-    //     id: 3,
-    //     title: 'OneDollarDice',
-    //     url: 'project-management-ui',
-    //     category: 'UI/UX Design',
-    //     img: '/images/ui-project-1.jpg',
-    //     projectHeader: {
-    //         title: 'Project Management UI',
-    //         publishDate: 'Jul 26, 2021',
-    //         tags: 'UI / Frontend',
-    //     },
-    //     projectImages: [
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/ui-project-1.jpg',
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/web-project-2.jpg',
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/mobile-project-2.jpg',
-    //         },
-    //     ],
-    //     projectInfo: {
-    //         clientHeading: 'About Client',
-    //         companyInfo: [
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Name',
-    //                 details: 'Company Ltd',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Services',
-    //                 details: 'UI Design & Frontend Development',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Website',
-    //                 details: 'https://company.com',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Phone',
-    //                 details: '555 8888 888',
-    //             },
-    //         ],
-    //         objectivesHeading: 'Objective',
-    //         objectivesDetails:
-    //             'some objective',
-    //         technologies: [
-    //             {
-    //                 title: 'Tools & Technologies',
-    //                 techs: [
-    //                     'HTML',
-    //                     'CSS',
-    //                     'JavaScript',
-    //                     'Vue.js',
-    //                     'TailwindCSS',
-    //                     'AdobeXD',
-    //                 ],
-    //             },
-    //         ],
-    //         projectDetailsHeading: 'Challenge',
-    //         projectDetails: [
-    //             {
-    //                 id: uuidv4(),
-    //                 details:
-    //                     'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-    //             }
-    //         ],
-    //     },
-    // },
     {
         id: 4,
         title: 'iFridge',
         url: 'ifridge',
-        category: 'Progressive Web Application',
+        category: 'PWA',
         img: '/images/ui-project-1.jpg',
         projectHeader: {
             title: 'iFridge - Portable Inventory & Recipe Generator',
@@ -361,9 +283,9 @@ export const projectsData: ProjectData[] = [
     },
     {
         id: 6,
-        title: 'StudyGrove',
+        title: 'StudyGrove Community',
         url: 'studygrove',
-        category: 'Web Application',
+        category: 'Website',
         img: '/images/projects/studygrove/image1.png',
         projectHeader: {
             title: 'StudyGrove - Online Study Communication Platform (Concept)',
@@ -415,9 +337,9 @@ export const projectsData: ProjectData[] = [
     },
     {
         id: 7,
-        title: 'ICT Fundamentals',
+        title: 'ICT Fundamentals Project',
         url: 'ict-fundamentals',
-        category: 'Web Application',
+        category: 'Website',
         img: '/images/projects/ictfundamentals/image1.png',
         projectHeader: {
             title: 'ICT Fundamentals',
@@ -521,7 +443,7 @@ export const projectsData: ProjectData[] = [
     },
     {
         id: 9,
-        title: 'Auckland Transport Bot',
+        title: 'The Auckland Transport Bot',
         url: 'auckland-transport-discord-bot',
         category: 'Discord Bot',
         img: '/images/projects/auckland-transport/atimage.png',
@@ -581,160 +503,4 @@ export const projectsData: ProjectData[] = [
             ],
         },
     },
-    // {
-    //     id: 10,
-    //     title: 'TheNexus',
-    //     url: 'project-management-ui',
-    //     category: 'UI/UX Design',
-    //     img: '/images/ui-project-1.jpg',
-    //     projectHeader: {
-    //         title: 'Project Management UI',
-    //         publishDate: 'Jul 26, 2021',
-    //         tags: 'UI / Frontend',
-    //     },
-    //     projectImages: [
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/ui-project-1.jpg',
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/web-project-2.jpg',
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/mobile-project-2.jpg',
-    //         },
-    //     ],
-    //     projectInfo: {
-    //         clientHeading: 'About Client',
-    //         companyInfo: [
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Name',
-    //                 details: 'Company Ltd',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Services',
-    //                 details: 'UI Design & Frontend Development',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Website',
-    //                 details: 'https://company.com',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Phone',
-    //                 details: '555 8888 888',
-    //             },
-    //         ],
-    //         objectivesHeading: 'Objective',
-    //         objectivesDetails:
-    //             'some objective',
-    //         technologies: [
-    //             {
-    //                 title: 'Tools & Technologies',
-    //                 techs: [
-    //                     'HTML',
-    //                     'CSS',
-    //                     'JavaScript',
-    //                     'Vue.js',
-    //                     'TailwindCSS',
-    //                     'AdobeXD',
-    //                 ],
-    //             },
-    //         ],
-    //         projectDetailsHeading: 'Challenge',
-    //         projectDetails: [
-    //             {
-    //                 id: uuidv4(),
-    //                 details:
-    //                     'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-    //             }
-    //         ],
-    //     },
-    // },
-    // {
-    //     id: 11,
-    //     title: 'SchoolMania',
-    //     url: 'project-management-ui',
-    //     category: 'UI/UX Design',
-    //     img: '/images/ui-project-1.jpg',
-    //     projectHeader: {
-    //         title: 'Project Management UI',
-    //         publishDate: 'Jul 26, 2021',
-    //         tags: 'UI / Frontend',
-    //     },
-    //     projectImages: [
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/ui-project-1.jpg',
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/web-project-2.jpg',
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             title: 'Kabul Project Management UI',
-    //             img: '/images/mobile-project-2.jpg',
-    //         },
-    //     ],
-    //     projectInfo: {
-    //         clientHeading: 'About Client',
-    //         companyInfo: [
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Name',
-    //                 details: 'Company Ltd',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Services',
-    //                 details: 'UI Design & Frontend Development',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Website',
-    //                 details: 'https://company.com',
-    //             },
-    //             {
-    //                 id: uuidv4(),
-    //                 title: 'Phone',
-    //                 details: '555 8888 888',
-    //             },
-    //         ],
-    //         objectivesHeading: 'Objective',
-    //         objectivesDetails:
-    //             'some objective',
-    //         technologies: [
-    //             {
-    //                 title: 'Tools & Technologies',
-    //                 techs: [
-    //                     'HTML',
-    //                     'CSS',
-    //                     'JavaScript',
-    //                     'Vue.js',
-    //                     'TailwindCSS',
-    //                     'AdobeXD',
-    //                 ],
-    //             },
-    //         ],
-    //         projectDetailsHeading: 'Challenge',
-    //         projectDetails: [
-    //             {
-    //                 id: uuidv4(),
-    //                 details:
-    //                     'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-    //             }
-    //         ],
-    //     },
-    // },
 ]

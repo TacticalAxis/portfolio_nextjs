@@ -123,6 +123,11 @@ const AppHeader: FC = () => {
                             Contact
                         </Link>
                     </div>
+                    <div className="block text-center text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark  bg-yellow-300  rounded-md py-2.5">
+                        <Link href="https://donate.stripe.com/3cs14e019eX59cQbII" aria-label="Donate" target="_blank" rel="noopener noreferrer">
+                            Donate
+                        </Link>
+                    </div>
                     <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
                         <button
                             onClick={showHireMeModal}
@@ -154,6 +159,14 @@ const AppHeader: FC = () => {
                         aria-label="Contact"
                     >
                         <Link href="/contact">Contact</Link>
+                    </div>
+
+                    {/* this div should look like the others, but look like a yellow button */}
+                    <div
+                        className="block text-left text-lg font-medium text-primary-dark dark:text-primary-dark hover:text-secondary-dark dark:hover:text-secondary-dark sm:mx-4 mb-2 sm:py-2 bg-yellow-300  rounded-md px-5 py-2.5"
+                        aria-label="Donate"
+                    >
+                        <Link href="https://donate.stripe.com/3cs14e019eX59cQbII" aria-label="Donate" target="_blank" rel="noopener noreferrer">Donate</Link>
                     </div>
                 </div>
 

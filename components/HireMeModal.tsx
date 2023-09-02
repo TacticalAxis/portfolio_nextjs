@@ -1,14 +1,9 @@
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiX } from 'react-icons/fi'
 import Button from './reusable/Button'
 
-const selectOptions = [
-    'Web Application',
-    'Mobile Application',
-    'UI/UX Design',
-    'Branding',
-]
+const selectOptions = ['Web Application', 'Python/Java Application', 'Other']
 
 type HireMeModalProps = {
     onClose: () => void
@@ -21,6 +16,11 @@ type HireMeModalProps = {
 }
 
 const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
+    const [submitted, setSubmitted] = useState(false)
+    const [submitTime, setSubmitTime] = useState<string | null>(null)
+
+    const [mainTitle, setMainTitle] = useState('What project are you looking for?')
+
     // send request
     const sendRequest = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -32,19 +32,20 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
             message: formData.get('message') as string,
         }
 
-        onRequest(data)
+        // onRequest(data)
 
         // send to backend (pages/api/hello.ts)
         fetch('/api/request', {
             method: 'POST',
             body: JSON.stringify(data),
+        }).then((res) => {
+            if (res.status === 200) {
+                setSubmitted(true)
+                const currentTime = new Date().toLocaleTimeString()
+                setSubmitTime(currentTime)
+                setMainTitle('Thanks for your request.')
+            }
         })
-        // .then(async (res) => {
-        // let data = await res.json();
-        // console.log(data);
-        // close modal
-        // onClose();
-        // });
     }
 
     return (
@@ -63,7 +64,7 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
                     <div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
                         <div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
                             <h5 className=" text-primary-dark dark:text-primary-light text-xl">
-                                What project are you looking for?
+                                {mainTitle}
                             </h5>
                             <button
                                 onClick={onClose}
@@ -73,69 +74,70 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
                             </button>
                         </div>
                         <div className="modal-body p-5 w-full h-full">
-                            <form
-                                onSubmit={sendRequest}
-                                className="max-w-xl m-4 text-left"
-                                autoComplete="off"
-                            >
-                                <div className="">
-                                    <input
-                                        className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-                                        id="name"
-                                        name="name"
-                                        type="text"
-                                        required
-                                        placeholder="Name"
-                                        aria-label="Name"
-                                        autoComplete='off'
-                                    />
-                                </div>
-                                <div className="mt-6">
-                                    <input
-                                        className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-                                        id="email"
-                                        name="email"
-                                        type="text"
-                                        required
-                                        placeholder="Email"
-                                        aria-label="Email"
-                                        autoComplete='off'
-                                    />
-                                </div>
-                                <div className="mt-6">
-                                    <select
-                                        className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-                                        id="subject"
-                                        name="subject"
-                                        required
-                                        aria-label="Project Category"
-                                    >
-                                        {selectOptions.map((option) => (
-                                            <option
-                                                className="text-normal sm:text-md"
-                                                key={option}
-                                            >
-                                                {option}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
+                            {!submitted ? (
+                                <form
+                                    onSubmit={sendRequest}
+                                    className="max-w-xl m-4 text-left"
+                                    autoComplete="off"
+                                >
+                                    <div className="">
+                                        <input
+                                            className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+                                            id="name"
+                                            name="name"
+                                            type="text"
+                                            required
+                                            placeholder="Name"
+                                            aria-label="Name"
+                                            autoComplete="off"
+                                        />
+                                    </div>
+                                    <div className="mt-6">
+                                        <input
+                                            className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+                                            id="email"
+                                            name="email"
+                                            type="text"
+                                            required
+                                            placeholder="Email"
+                                            aria-label="Email"
+                                            autoComplete="off"
+                                        />
+                                    </div>
+                                    <div className="mt-6">
+                                        <select
+                                            className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+                                            id="subject"
+                                            name="subject"
+                                            required
+                                            aria-label="Project Category"
+                                        >
+                                            {selectOptions.map((option) => (
+                                                <option
+                                                    className="text-normal sm:text-md"
+                                                    key={option}
+                                                >
+                                                    {option}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
 
-                                <div className="mt-6">
-                                    <textarea
-                                        className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
-                                        id="message"
-                                        name="message"
-                                        cols={14}
-                                        rows={6}
-                                        aria-label="Details"
-                                        placeholder="Project description"
-                                    ></textarea>
-                                </div>
+                                    <div className="mt-6">
+                                        <textarea
+                                            className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+                                            id="message"
+                                            name="message"
+                                            cols={14}
+                                            rows={6}
+                                            aria-label="Details"
+                                            placeholder="Project description"
+                                        ></textarea>
+                                    </div>
 
-                                <div className="mt-6 pb-4 sm:pb-1">
-                                    <span
-                                        className="px-4
+                                    <div className="mt-6 pb-4 sm:pb-1">
+                                        <span
+                                            className="px-4
 											sm:px-6
 											py-2
 											sm:py-2.5
@@ -144,12 +146,17 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
 											hover:bg-indigo-600
 											rounded-md
 											focus:ring-1 focus:ring-indigo-900 duration-500"
-                                        aria-label="Submit Request"
-                                    >
-                                        <Button title="Send Request" />
-                                    </span>
+                                            aria-label="Submit Request"
+                                        >
+                                            <Button title="Send Request" />
+                                        </span>
+                                    </div>
+                                </form>
+                            ) : (
+                                <div className="text-center">
+                                    <h2>Submitted at {submitTime}</h2>
                                 </div>
-                            </form>
+                            )}
                         </div>
                         <div className="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right">
                             <span

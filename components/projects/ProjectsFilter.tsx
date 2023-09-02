@@ -1,11 +1,7 @@
 import React, { ChangeEvent } from 'react'
+import { projectsData } from '@/data/projectsData';
 
-const selectOptions = [
-    'Web Application',
-    'Mobile Application',
-    'UI/UX Design',
-    'Branding',
-]
+const selectOptions = Array.from(new Set(projectsData.map(project => project.category)));
 
 interface ProjectsFilterProps {
     setSelectProject: (value: string) => void
@@ -45,7 +41,7 @@ const ProjectsFilter: React.FC<ProjectsFilterProps> = ({
             "
         >
             <option value="all" className="text-sm sm:text-md">
-                All Projects
+                All
             </option>
 
             {selectOptions.map((option) => (
