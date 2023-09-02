@@ -155,7 +155,9 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
                                 </form>
                             ) : (
                                 <div className="text-center">
-                                    <h2>Submitted at {submitTime}</h2>
+                                    <h2 className="text-primary-dark dark:text-primary-light">
+                                        Submitted at {submitTime}
+                                    </h2>
                                 </div>
                             )}
                         </div>
