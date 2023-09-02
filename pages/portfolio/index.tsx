@@ -5,7 +5,7 @@ import ProjectsGrid from '../../components/projects/ProjectsGrid'
 const Index: React.FC = () => {
     return (
         <div className="container mx-auto">
-            <PagesMetaHead title="Projects" />
+            <PagesMetaHead title="Portfolio" />
 
             <ProjectsGrid />
         </div>

@@ -53,7 +53,7 @@ const About: React.FC = () => {
                                 Implemented advanced NLP techniques using Spacy
                                 and SentenceTransformers to determine text
                                 similarity, enhancing the accuracy of part
-                                identification based on the panel beaters'
+                                identification based on the panel beaters&#39;
                                 quotes with over 46,000 part codes.
                             </li>
                             <li>
