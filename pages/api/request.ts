@@ -9,9 +9,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // If it's a POST request, proceed with the logic
     try {
         const data = JSON.parse(req.body)
-let respData = {
-    status: 'ok'
-}
+        let respData = {
+            status: 'ok'
+        }
 
         // fetch the webhook url and send the data to it
         fetch(
@@ -40,7 +40,7 @@ let respData = {
         })
 
         // send a response back to the client
-        res.status(200).json({ status: 'ok' })
+        res.status(200).json({ rsp: respData });
     } catch (error) {
         res.status(500).json({ error: 'Server error' });
     }
