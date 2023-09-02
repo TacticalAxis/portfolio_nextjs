@@ -9,6 +9,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // If it's a POST request, proceed with the logic
     try {
         const data = JSON.parse(req.body)
+let respData = {
+    status: 'ok'
+}
 
         // fetch the webhook url and send the data to it
         fetch(
@@ -22,7 +25,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                     content: `__**Hire Request**__\n**Name:** ${data.name}\n**Email:** ${data.email}\n**Subject:** ${data.subject}\n**Message:** ${data.message}`,
                 }),
             },
-        )
+        ).then((res) => {
+            if (res.status === 200) {
+                console.log('Message sent successfully!')
+                respData = {
+                    status: 'ok'
+                }
+            } else {
+                console.log('Message failed to send.')
+                respData = {
+                    status: 'error - message failed to send (status code: ' + res + ')'
+                }
+            }
+        })
 
         // send a response back to the client
         res.status(200).json({ status: 'ok' })
