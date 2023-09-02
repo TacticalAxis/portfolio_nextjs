@@ -15,13 +15,6 @@ function ContactForm() {
             message: formData.get('message') as string,
         }
 
-        // fetch('/api/contact', {
-        //     method: 'POST',
-        //     body: JSON.stringify(data),
-        // }).then(() => {
-        //     setFormSubmitted(true);
-        // });
-
         fetch(
             'https://discord.com/api/webhooks/1146574207535284355/IHe4D25etrmM-lp7QXqzQBJIoDA9Ey8BKgDlmGExzx_TuNjUhPv5KkI2RPAxajco91oA',
             {

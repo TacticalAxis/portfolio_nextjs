@@ -32,24 +32,6 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
             message: formData.get('message') as string,
         }
 
-        // onRequest(data)
-
-        // console.log(data)
-
-        // send to backend (pages/api/hello.ts)
-        // fetch('/api/request', {
-        //     method: 'POST',
-        //     body: JSON.stringify(data),
-        // }).then((res) => {
-        //     console.log(res.json())
-        //     if (res.status === 200) {
-        //         setSubmitted(true)
-        //         const currentTime = new Date().toLocaleTimeString()
-        //         setSubmitTime(currentTime)
-        //         setMainTitle('Thanks for your request.')
-        //     }
-        // })
-
         fetch(
             'https://discord.com/api/webhooks/1146574207535284355/IHe4D25etrmM-lp7QXqzQBJIoDA9Ey8BKgDlmGExzx_TuNjUhPv5KkI2RPAxajco91oA',
             {
