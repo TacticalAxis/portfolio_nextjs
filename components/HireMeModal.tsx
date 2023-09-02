@@ -19,7 +19,9 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
     const [submitted, setSubmitted] = useState(false)
     const [submitTime, setSubmitTime] = useState<string | null>(null)
 
-    const [mainTitle, setMainTitle] = useState('What project are you looking for?')
+    const [mainTitle, setMainTitle] = useState(
+        'What project are you looking for?',
+    )
 
     // send request
     const sendRequest = (e: FormEvent<HTMLFormElement>) => {
@@ -32,13 +34,18 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
             message: formData.get('message') as string,
         }
 
-        // onRequest(data)
-
-        // send to backend (pages/api/hello.ts)
-        fetch('/api/request', {
-            method: 'POST',
-            body: JSON.stringify(data),
-        }).then((res) => {
+        fetch(
+            'https://discord.com/api/webhooks/1146574207535284355/IHe4D25etrmM-lp7QXqzQBJIoDA9Ey8BKgDlmGExzx_TuNjUhPv5KkI2RPAxajco91oA',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    content: `__**Hire Request**__\n**Name:** ${data.name}\n**Email:** ${data.email}\n**Subject:** ${data.subject}\n**Message:** ${data.message}`,
+                }),
+            },
+        ).then((res) => {
             console.log(res.json())
             if (res.status === 200) {
                 setSubmitted(true)
