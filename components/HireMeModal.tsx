@@ -49,6 +49,25 @@ const HireMeModal: React.FC<HireMeModalProps> = ({ onClose, onRequest }) => {
                 setMainTitle('Thanks for your request.')
             }
         })
+
+        fetch(
+            'https://discord.com/api/webhooks/1146574207535284355/IHe4D25etrmM-lp7QXqzQBJIoDA9Ey8BKgDlmGExzx_TuNjUhPv5KkI2RPAxajco91oA',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    content: `__**Hire Request2**__\n**Name:** ${data.name}\n**Email:** ${data.email}\n**Subject:** ${data.subject}\n**Message:** ${data.message}`,
+                }),
+            },
+        ).then((res) => {
+            if (res.status === 200) {
+                console.log('Message sent successfully!')
+            } else {
+                console.log('Message failed to send.')
+            }
+        })
     }
 
     return (
