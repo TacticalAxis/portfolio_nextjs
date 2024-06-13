@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FiArrowDownCircle } from 'react-icons/fi'
 import useThemeSwitcher from '../../hooks/useThemeSwitcher'
+import Image from 'next/image'
 
 const AppBanner: React.FC = () => {
     const [activeTheme] = useThemeSwitcher()
@@ -13,8 +14,7 @@ const AppBanner: React.FC = () => {
             className="flex flex-col justify-center items-center mt-12"
         >
             <div className="w-full md:w-1/2 text-center">
-                {/* motion image */}
-                <motion.img
+                <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
@@ -22,10 +22,24 @@ const AppBanner: React.FC = () => {
                         duration: 0.9,
                         delay: 0.1,
                     }}
-                    src={`/images/profile.png`}
-                    alt="Nathan Dsouza"
                     className="mx-auto w-48 h-48 sm:w-60 sm:h-60 rounded-full shadow-lg"
-                />
+                >
+                    <Image
+                        src={`/images/profile.png`}
+                        alt="Nathan Dsouza"
+                        className="w-full h-full rounded-full"
+                        priority={true}
+                        width={1000}
+                        height={1000}
+                    />
+                    <div
+                        className={`absolute w-48 h-48 sm:w-60 sm:h-60 rounded-full bg-gradient-to-br from-${
+                            activeTheme === 'dark' ? 'ternary-dark' : 'primary-light'
+                        } to-${
+                            activeTheme === 'dark' ? 'ternary-dark' : 'primary-light'
+                        } opacity-75`}
+                    ></div>
+                </motion.div>
 
                 <br />
                 <br />

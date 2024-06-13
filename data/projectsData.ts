@@ -49,15 +49,6 @@ export interface ProjectData {
     projectInfo: ProjectInfo;
 }
 
-// COMPANY INFO EXAMPLE
-// companyInfo: [
-//     {
-//         id: uuidv4(),
-//         title: 'Name',
-//         details: 'Company Ltd',
-//     }
-// ],
-
 export const projectsData: ProjectData[] = [
     {
         id: 1,
@@ -226,7 +217,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 5,
         title: 'Ramen NFT Collectibles',
-        url: 'https://ramennft.tak-7.net',
+        url: 'https://ramennft.nathandsouza.com',
         category: 'NFT Project',
         img: '/images/projects/ramennft/image1.png',
         projectHeader: {
@@ -284,7 +275,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 6,
         title: 'StudyGrove Community',
-        url: 'https://studygrove.tak-7.net',
+        url: 'https://studygrove.nathandsouza.com',
         category: 'Website',
         img: '/images/projects/studygrove/image1.png',
         projectHeader: {
@@ -338,7 +329,7 @@ export const projectsData: ProjectData[] = [
     {
         id: 7,
         title: 'ICT Fundamentals Project',
-        url: 'https://comp501.tak-7.net',
+        url: 'https://comp501.nathandsouza.com',
         category: 'Website',
         img: '/images/projects/ictfundamentals/image1.png',
         projectHeader: {
