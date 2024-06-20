@@ -28,7 +28,7 @@ const ProjectSingle: React.FC<ProjectSingleProps> = ({
             }}
         >
             <Link
-                href="/projects/[id]"
+                href={'/projects/' + id}
                 as={'/projects/' + id}
                 aria-label="Single Project"
                 passHref
